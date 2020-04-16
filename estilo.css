@@ -1,0 +1,23 @@
+@media (min-width: 500px) {
+  #fundo {
+    height: 100%;
+    width: 100%; }
+
+  h1 {
+    position: absolute;
+    margin-top: -700px;
+    margin-left: 20px;
+    font-family: Gill Sans, sans-serif; } }
+@media (max-width: 499px) {
+  body {
+    background-color: #8365b1; }
+
+  #fundo {
+    display: none; }
+
+  h1 {
+    font-size: 20px;
+    position: absolute;
+    margin: 50px; } }
+
+/*# sourceMappingURL=estilo.css.map */
