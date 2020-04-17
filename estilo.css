@@ -3,7 +3,7 @@ body {
   background: url("../project0/img/skatefundo.jpg"); }
 
 #tit {
-  margin: auto;
+  margin: 0 auto;
   padding: 10px; }
 
 .container {
@@ -107,12 +107,13 @@ body {
   transition-delay: .8s; }
 
 .hero h1 {
-  margin-top: 158px;
+  width: auto;
+  margin-top: 178px;
   text-transform: uppercase;
   font-family: impact;
   font-size: 26px;
   letter-spacing: 4px;
-  color: white; }
+  color: black; }
 
 span {
   margin: 0px;
@@ -138,7 +139,7 @@ span {
     font-family: 'Mukta Malar';
     transition: all .6s ease;
     cursor: pointer;
-    color: white; }
+    color: black; }
     .search input + div {
       position: relative;
       height: 28px;
@@ -152,7 +153,7 @@ span {
         right: 0;
         top: 0;
         fill: none;
-        stroke: white;
+        stroke: black;
         stroke-width: 1.5px;
         stroke-dashoffset: 271.908;
         stroke-dasharray: 59 212.908;

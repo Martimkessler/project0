@@ -2,10 +2,6 @@ body {
   height: 100vh;
   background: url('../project0/img/skatefundo.jpg');
 }
-#tit {
-  margin: auto;
-  padding: 10px;
-}
 .container {
   width: 80%;
   height: 40px;
@@ -113,7 +109,7 @@ body {
 .navigation-menu.active li:nth-child(6) {
   transition-delay: .8s;
 }
-.hero h1{
+.hero {
   margin-top: 158px;
   text-transform: uppercase;
   font-family: impact;
@@ -129,7 +125,7 @@ span{
   letter-spacing: 2px;
   font-family: impact;
 }
-$color: white;
+$color: black;
 .search {
   display: table;
   input {
