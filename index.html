@@ -2,15 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilo.css">
-   
-    
+        
     <title>Meu website</title>
 </head>
 <body>
-  <img src="skatefundo.jpg" alt="" id="fundo">
-  <h1>Skateboarding</h1>
+<div class="container">
+
+
+
+
+<div class="navigation-wrapper">
+  <div class="navigation-button">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div class="navigation-menu">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">HISTORY</a></li>
+        <li><a href="">TRICKPEDIA</a></li>
+        <li><a href="">PRO´s</a></li>
+        <li><a href="">SPOTS</a></li>
+        
+        
+    </ul>
+  </div>
+</div>
+<section class="hero">
+    <h1 id="tit"> <br> <span> SKATEBOARDING</span></h1>
+    <div class="search">
+      <input type="text" placeholder=" ">
+      <div>
+          <svg>
+              <use xlink:href="#path">
+          </svg>
+      </div>
+  </div>
+</section>
+
+</div>
+<script>
+var navButton = document.querySelector('.navigation-button');
+var navMenu = document.querySelector('.navigation-menu');
+var win = window;
+
+function openMenu(event) {
+  
+  navButton.classList.toggle('active');
+  navMenu.classList.toggle('active');
+
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}
+  
+function closeMenu(event) {
+  if (navButton.classList.contains('active')) {
+    navButton.classList.remove('active');
+    navMenu.classList.remove('active');
+  }
+}
+  navButton.addEventListener('click', openMenu, false);
+
+win.addEventListener('click',closeMenu, false);
+  
+</script>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
+      <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+  </symbol>
+</svg>
+  
+
+
 </body>
+
 </html> 

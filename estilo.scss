@@ -1,28 +1,193 @@
+body {
+  height: 100vh;
+  background: url('../project0/img/skatefundo.jpg');
+}
+#tit {
+  margin: auto;
+  padding: 10px;
+}
+.container {
+  width: 80%;
+  height: 40px;
+  position: relative;
+  top: 40px;
+  margin: 0 auto;
+}
+.navigation-wrapper {
+  position: relative;
+}
+.navigation-button {
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1;
+  top: 40px;
+  right: 100px;
+  background: transparent;
+  cursor: pointer;
+}
+.navigation-button .fa {
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 10px;
+    color: white;
+}
+ 
 
-@media(min-width: 500px){
-  #fundo {
-    height: 100%;
-    width:100%;
-  }
-  h1 {
-    position: absolute;
-    margin-top: -700px;
-    margin-left: 20px;
-    font-family: Gill Sans, sans-serif;
-  }
+.navigation-menu ul li {
+  list-style: none;
+  font-family: impact;
+  font-weight: 300;
+  color: hsl(0,0%,70%);
 }
-@media(max-width: 499px){
-  $color: #8365b1;
-  body {
+
+.navigation-menu {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  background: #fff;
+  height: 100%;
+  transform: skewX(0deg) translate(100%,0);
+  transform-origin: top right;
+  transition: all .2s ease-in;
+  z-index: -1;
+}
+.navigation-menu ul {
+  transform: skewX(-8deg);
+  transform-origin: top left;
+  position: fixed;
+  right: 120px;
+  top: 120px;
+  width: 400px;
+  text-align: right;
+
+}
+.navigation-menu ul li {
+  position: relative;
+    z-index: 999;
+  font-size: 32px;
+  color: hsl(0,0%,10%);
+  line-height: 64px;
+}
+.navigation-menu ul li  a {
+  border: none;
+  color: hsl(0,0%,10%);
+  text-decoration: none;
+}
+.navigation-menu.active {
+  transform: skewX(8deg) translate(0,0);
     
-    background-color: $color;
-  }
-  #fundo {
-    display: none;
-  }
-  h1 {
-    font-size: 20px;
-    position: absolute;
-    margin: 50px;
+}
+
+.navigation-menu li {
+  opacity: 0;
+  transform: translate(0, 10px);
+  transition: all .0s ease-in .3s;
+  
+}
+.navigation-menu.active li {
+  opacity: 1;
+  transform: translate(0,0);
+  transition: all .2s ease-in 0s;
+}
+.navigation-menu.active li:nth-child(1) {
+  transition-delay: .3s;
+}
+.navigation-menu.active li:nth-child(2) {
+  transition-delay: .4s;
+}
+.navigation-menu.active li:nth-child(3) {
+  transition-delay: .5s;
+}
+.navigation-menu.active li:nth-child(4) {
+  transition-delay: .6s;
+}
+.navigation-menu.active li:nth-child(5) {
+  transition-delay: .7s;
+}
+.navigation-menu.active li:nth-child(6) {
+  transition-delay: .8s;
+}
+.hero h1{
+  margin-top: 158px;
+  text-transform: uppercase;
+  font-family: impact;
+  font-size: 26px;
+  letter-spacing: 4px;
+  color: white;
+}
+
+        
+span{
+  margin: 0px;
+  font-size: 55px;
+  letter-spacing: 2px;
+  font-family: impact;
+}
+$color: white;
+.search {
+  display: table;
+  input {
+      background: none;
+      border: none;
+      outline: none;
+      width: 28px;
+      min-width: 0;
+      padding: 0;
+      z-index: 1;
+      position: relative;
+      line-height: 18px;
+      margin: 5px 0;
+      font-size: 14px;
+      -webkit-appearance: none;
+      font-family: 'Mukta Malar';
+      transition: all .6s ease;
+      cursor: pointer;
+      color: $color;
+      & + div {
+          position: relative;
+          height: 28px;
+          width: 100%;
+          margin: -28px 0 0 0;
+          svg {
+              display: block;
+              position: absolute;
+              height: 28px;
+              width: 160px;
+              right: 0;
+              top: 0;
+              fill: none;
+              stroke: $color;
+              stroke-width: 1.5px;
+              stroke-dashoffset: 212.908 + 59;
+              stroke-dasharray: 59 212.908;
+              transition: all .6s ease;
+          }
+      }
+      &:not(:placeholder-shown),
+      &:focus {
+          width: 160px;
+          padding: 0 4px;
+          cursor: text;
+          &+ div {
+              svg {
+                  stroke-dasharray: 150 212.908;
+                  stroke-dashoffset: 300;
+              }
+          }
+      }
   }
 }
+
+::selection {
+  background: rgba(#fff, .2);
+}
+::-moz-selection {
+  background: rgba(#fff, .2);
+}       
+/*# sourceMappingURL=estilo.css.map */
